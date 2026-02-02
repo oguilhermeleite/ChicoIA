@@ -1,0 +1,26 @@
+[Unit]
+Description=ChicoIA Telegram Bot
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=chicobot
+Group=chicobot
+WorkingDirectory=/opt/chicobot-telegram
+Environment="PATH=/opt/chicobot-telegram/venv/bin"
+ExecStart=/opt/chicobot-telegram/venv/bin/python /opt/chicobot-telegram/bot/main.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/chicobot/chicobot.log
+StandardError=append:/var/log/chicobot/chicobot-error.log
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log/chicobot
+
+[Install]
+WantedBy=multi-user.target

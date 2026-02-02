@@ -1,0 +1,230 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║     🌐 REPLIT - BOT ONLINE 24/7 (PASSO A PASSO SIMPLES)          ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+⭐ MAIS FÁCIL E RÁPIDO - 5 MINUTOS!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 1: CRIAR CONTA NO REPLIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abra seu navegador
+
+2. Acesse: https://replit.com/
+
+3. Clique em "Sign up" (botão azul no canto superior direito)
+
+4. Escolha uma opção para criar conta:
+   • Continue with Google (RECOMENDADO - mais rápido)
+   • Continue with GitHub
+   • Continue with Email
+
+5. Complete o cadastro (nome, username, etc)
+
+6. Verifique seu email se necessário
+
+✅ Conta criada!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 2: CRIAR NOVO PROJETO (REPL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Após login, você verá o dashboard do Replit
+
+2. Clique no botão "+ Create Repl" (azul, no canto superior)
+
+3. Na janela que abrir:
+   • Template: Procure e selecione "Python"
+   • Title: Digite "chicobot-telegram"
+   • Public/Private: Deixe como preferir
+
+4. Clique em "Create Repl"
+
+5. Aguarde o Replit criar o ambiente (10-20 segundos)
+
+✅ Projeto criado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 3: ADICIONAR O CÓDIGO DO BOT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. No editor do Replit, você verá um arquivo "main.py" aberto
+
+2. APAGUE todo o conteúdo que está no main.py
+
+3. No seu computador:
+   • Abra a pasta: C:\Users\Guilherme\Downloads\Chico - telegram
+   • Abra o arquivo: bot_simples_24_7.py
+   • Selecione TODO o conteúdo (Ctrl+A)
+   • Copie (Ctrl+C)
+
+4. Volte para o Replit
+
+5. Cole todo o código no main.py (Ctrl+V)
+
+6. O código agora está no Replit!
+
+✅ Código adicionado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 4: CONFIGURAR O TOKEN (SECRETS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. No Replit, olhe a barra lateral ESQUERDA
+
+2. Procure o ícone de CADEADO 🔒 (Secrets)
+
+3. Clique nele
+
+4. Você verá a aba "Secrets" aberta
+
+5. Clique em "New secret"
+
+6. Preencha:
+   • Key: TELEGRAM_BOT_TOKEN
+   • Value: 8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE
+
+7. Clique em "Add secret"
+
+✅ Token configurado com segurança!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 5: AJUSTAR O CÓDIGO PARA USAR O SECRET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. No main.py, procure esta linha (linha 12):
+   TOKEN = "8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE"
+
+2. SUBSTITUA por:
+   import os
+   TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', "8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE")
+
+3. Adicione no topo do arquivo (linha 10, depois dos imports):
+   import os
+
+✅ Código ajustado para usar secret!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 6: EXECUTAR O BOT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. No topo do Replit, você verá um botão verde "Run" ▶️
+
+2. Clique nele
+
+3. O console (parte de baixo) vai mostrar:
+   ═══════════════════════════════════════════════════
+   🤖 ChicoIA Bot - MODO 24/7 ATIVO
+   ═══════════════════════════════════════════════════
+
+   ✅ Conectado com sucesso!
+   ✅ Bot: @ChicoIA_bot
+
+   🎯 BOT ONLINE - ATENDENDO TODOS OS USUÁRIOS
+
+4. Quando ver isso = BOT ESTÁ FUNCIONANDO NA NUVEM! ✅
+
+✅ Bot rodando no Replit!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 7: TESTAR NO TELEGRAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abra o Telegram (celular ou computador)
+
+2. Procure: @ChicoIA_bot
+
+3. Envie: /start
+
+4. O bot VAI RESPONDER imediatamente! ✅
+
+5. E o melhor: FUNCIONA MESMO SE VOCÊ FECHAR O REPLIT!
+
+✅ Bot funcionando 24/7!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 8: MANTER BOT SEMPRE ACORDADO (UPTIMEROBOT)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEMA: Replit coloca o bot para "dormir" após inatividade
+
+SOLUÇÃO: Usar UptimeRobot para "acordar" o bot automaticamente!
+
+
+1. Acesse: https://uptimerobot.com/
+
+2. Clique em "Sign Up" (cadastro grátis)
+
+3. Após login, clique em "Add New Monitor"
+
+4. Preencha:
+   • Monitor Type: HTTP(s)
+   • Friendly Name: ChicoIA Bot
+   • URL: (copie a URL do seu Repl - aparece no topo do Replit)
+   • Monitoring Interval: 5 minutes
+
+5. Clique em "Create Monitor"
+
+6. Pronto! O UptimeRobot vai "pingar" seu bot a cada 5 minutos,
+   mantendo ele sempre acordado!
+
+✅ Bot 24/7 configurado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ PRONTO! SEU BOT ESTÁ ONLINE 24/7!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Agora:
+✅ Bot funciona 24 horas por dia
+✅ Não precisa deixar PC ligado
+✅ Funciona em mobile
+✅ Atende todos os usuários
+✅ 100% GRÁTIS!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Ver logs: Console do Replit mostra todas as mensagens
+• Parar bot: Clique em "Stop" no Replit
+• Reiniciar: Clique em "Run" novamente
+• Editar código: Edite direto no Replit e clique "Run"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 RESULTADO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Seu bot @ChicoIA_bot agora funciona 24/7 na nuvem!
+
+Usuários podem conversar a QUALQUER HORA, de QUALQUER LUGAR,
+pelo CELULAR ou COMPUTADOR!
+
+Você NUNCA mais precisa deixar seu computador ligado! 🚀
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 ChicoIA Bot - Como Usar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        .step {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+        }
+        .step-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .step-content {
+            margin-left: 55px;
+            color: #555;
+        }
+        .important {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .error {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #c7254e;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .commands {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .commands ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .commands li {
+            padding: 8px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .commands li:last-child {
+            border-bottom: none;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .credentials {
+            background: #fff;
+            border: 2px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .credentials strong {
+            color: #667eea;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 ChicoIA Telegram Bot</h1>
+        <p class="subtitle">Guia Completo de Instalação e Uso</p>
+
+        <div class="important">
+            <strong>⚠️ IMPORTANTE:</strong> Você precisa ter Python 3.11 ou superior instalado!
+        </div>
+
+        <h2>📥 Passo 1: Instalar Python</h2>
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Baixar Python
+            </div>
+            <div class="step-content">
+                <p>Acesse: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></p>
+                <p>Baixe Python 3.11 ou superior (versão mais recente recomendada)</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Instalar Python
+            </div>
+            <div class="step-content">
+                <p>Execute o instalador baixado</p>
+                <div class="important">
+                    <strong>⚠️ MUITO IMPORTANTE:</strong> Marque a opção <strong>"Add Python to PATH"</strong> durante a instalação!
+                </div>
+                <p>Clique em "Install Now" e aguarde a instalação terminar</p>
+            </div>
+        </div>
+
+        <h2>🚀 Passo 2: Executar o Bot</h2>
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Executar Script de Instalação
+            </div>
+            <div class="step-content">
+                <p>Na pasta do projeto, clique duas vezes no arquivo:</p>
+                <code>INSTALAR_E_EXECUTAR.bat</code>
+                <br><br>
+                <p>Este script irá automaticamente:</p>
+                <ul>
+                    <li>✓ Verificar se Python está instalado</li>
+                    <li>✓ Criar ambiente virtual</li>
+                    <li>✓ Instalar todas as dependências</li>
+                    <li>✓ Iniciar o bot</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="success">
+            <strong>✅ Sucesso!</strong> Se você ver a mensagem "Bot iniciado com sucesso!", o bot está funcionando!
+        </div>
+
+        <h2>📱 Passo 3: Testar no Telegram</h2>
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Abrir o Telegram
+            </div>
+            <div class="step-content">
+                <p>Abra o aplicativo do Telegram no seu celular ou computador</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">5</span>
+                Procurar o Bot
+            </div>
+            <div class="step-content">
+                <p>Na barra de pesquisa do Telegram, procure por:</p>
+                <code>@ChicoIA_bot</code>
+                <br><br>
+                <p><strong>Importante:</strong> Use o @ na frente do nome!</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">6</span>
+                Iniciar Conversa
+            </div>
+            <div class="step-content">
+                <p>Clique no bot e depois clique em <strong>"START"</strong> ou envie:</p>
+                <code>/start</code>
+                <br><br>
+                <p>O bot deve responder imediatamente com uma mensagem de boas-vindas! 🎉</p>
+            </div>
+        </div>
+
+        <h2>🎯 Comandos Disponíveis</h2>
+        <div class="commands">
+            <ul>
+                <li><span class="emoji">🚀</span><code>/start</code> - Mensagem de boas-vindas</li>
+                <li><span class="emoji">❓</span><code>/ajuda</code> - Ver todos os comandos</li>
+                <li><span class="emoji">✅</span><code>/teste</code> - Verificar se o bot está funcionando</li>
+                <li><span class="emoji">💬</span><strong>Qualquer mensagem</strong> - O bot responde naturalmente!</li>
+            </ul>
+        </div>
+
+        <h2>🔑 Credenciais do Bot</h2>
+        <div class="credentials">
+            <p><strong>Token Telegram:</strong> <code>8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE</code></p>
+            <p><strong>Nome do Bot:</strong> <code>@ChicoIA_bot</code></p>
+            <p><strong>Status:</strong> ✅ Configurado e pronto para uso</p>
+        </div>
+
+        <h2>❌ Problemas Comuns</h2>
+
+        <div class="error">
+            <strong>Problema:</strong> "Python não foi encontrado"<br>
+            <strong>Solução:</strong> Instale Python e certifique-se de marcar "Add Python to PATH" durante instalação.
+        </div>
+
+        <div class="error">
+            <strong>Problema:</strong> Bot não responde no Telegram<br>
+            <strong>Solução:</strong>
+            <ul>
+                <li>Verifique se o script está rodando (janela preta aberta)</li>
+                <li>Procure por <code>@ChicoIA_bot</code> (com @)</li>
+                <li>Clique em "START" primeiro</li>
+            </ul>
+        </div>
+
+        <div class="error">
+            <strong>Problema:</strong> Erro ao instalar dependências<br>
+            <strong>Solução:</strong>
+            <ul>
+                <li>Verifique sua conexão com internet</li>
+                <li>Execute o script novamente</li>
+            </ul>
+        </div>
+
+        <h2>📝 Observações</h2>
+        <ul>
+            <li>Este é um bot de <strong>teste simplificado</strong></li>
+            <li><strong>NÃO</strong> precisa de banco de dados PostgreSQL</li>
+            <li>Funciona <strong>imediatamente</strong></li>
+            <li>Para usar o bot COMPLETO com IA Gemini e banco de dados, veja <code>README.md</code></li>
+        </ul>
+
+        <h2>📚 Documentação</h2>
+        <p>Para mais informações, consulte:</p>
+        <ul>
+            <li><code>LEIA-ME-PRIMEIRO.txt</code> - Instruções rápidas</li>
+            <li><code>README.md</code> - Documentação completa</li>
+            <li><code>QUICKSTART.md</code> - Guia de 5 minutos</li>
+            <li><code>PROJECT_SUMMARY.md</code> - Resumo do projeto</li>
+        </ul>
+
+        <div class="success" style="text-align: center; margin-top: 40px;">
+            <h3>✨ Pronto para começar!</h3>
+            <p>Execute <code>INSTALAR_E_EXECUTAR.bat</code> e envie <code>/start</code> no Telegram!</p>
+        </div>
+
+        <footer>
+            <p><strong>ChicoIA</strong> - Plataforma de Apostas Esportivas</p>
+            <p>📧 suporte@chicoia.com.br | 🌐 https://chicoia.com.br</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Desenvolvido com ❤️ para a comunidade brasileira</p>
+        </footer>
+    </div>
+</body>
+</html>

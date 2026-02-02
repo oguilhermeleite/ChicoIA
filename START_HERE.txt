@@ -1,0 +1,215 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║       🚀 COMECE AQUI - ChicoIA Telegram Bot                      ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+👋 Olá! Este é o bot Telegram completo do ChicoIA.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 ANTES DE COMEÇAR - LEIA ISTO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Leia QUICKSTART.md (5 minutos) - Guia rápido
+2. Ou leia README.md (completo) - Documentação detalhada
+3. Ou veja PROJECT_SUMMARY.md - Resumo do projeto
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ INÍCIO ULTRA-RÁPIDO (2 COMANDOS):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Execute:
+
+   docker-compose up -d
+
+2. Teste no Telegram:
+
+   Procure o bot e envie: /start
+
+PRONTO! O bot já está funcionando! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 NÃO TEM DOCKER? USE ISTO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Windows:
+
+   run.bat
+
+Linux/Mac:
+
+   chmod +x run.sh
+   ./run.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ VERIFICAR SE ESTÁ TUDO OK:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   python verify_setup.py
+
+Este script verifica:
+• Python 3.11+
+• Dependências instaladas
+• Arquivo .env configurado
+• Token do Telegram válido
+• PostgreSQL funcionando
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 O QUE O BOT FAZ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Conversa naturalmente em português
+✓ Analisa jogos de futebol
+✓ Dá sugestões de apostas
+✓ Usa IA (Google Gemini) para respostas inteligentes
+✓ Salva histórico de conversas
+✓ Onboarding automatizado (7 dias)
+✓ Sistema de opt-in para alertas
+
+Comandos disponíveis:
+• /start - Começar
+• /ajuda - Ver ajuda
+• /analisar [jogo] - Analisar partida
+• /palpites - Sugestões do dia
+• /meusdados - Ver seu histórico
+• /premium - Conhecer Premium
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 CREDENCIAIS (JÁ CONFIGURADAS):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Telegram Token: 8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE
+✅ Gemini API Key: AIzaSyCE0Bw-t0LsMacnxt-FjajyuHBzYiVNBaA
+
+⚠️  FALTA APENAS: Configurar PostgreSQL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💾 CONFIGURAR POSTGRESQL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPÇÃO 1 (FÁCIL): Docker
+
+   docker-compose up -d postgres
+
+   → Banco configurado automaticamente!
+
+OPÇÃO 2: PostgreSQL Local
+
+   1. Instale PostgreSQL
+   2. Crie banco:
+
+      CREATE DATABASE chicobot;
+      CREATE USER chicouser WITH PASSWORD 'senha123';
+      GRANT ALL PRIVILEGES ON DATABASE chicobot TO chicouser;
+
+   3. Edite .env:
+
+      DATABASE_URL=postgresql://chicouser:senha123@localhost:5432/chicobot
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 ESTRUTURA DO PROJETO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+bot/
+  main.py           ← Executar o bot (python bot/main.py)
+  handlers.py       ← Comandos do bot
+  gemini_service.py ← IA conversacional
+  database.py       ← PostgreSQL
+  onboarding.py     ← Onboarding 7 dias
+  prompts.py        ← Personalidade do Chico (edite aqui!)
+
+models/
+  user.py           ← Modelo de usuário
+
+utils/
+  helpers.py        ← Funções auxiliares
+
+tests/
+  test_bot.py       ← Testes
+
+Documentação:
+  README.md         ← Documentação completa
+  QUICKSTART.md     ← Início rápido
+  PROJECT_SUMMARY.md ← Resumo do projeto
+
+Scripts:
+  run.bat           ← Executar (Windows)
+  run.sh            ← Executar (Linux/Mac)
+  verify_setup.py   ← Verificar configuração
+  deploy.sh         ← Deploy produção
+
+Docker:
+  Dockerfile        ← Imagem Docker
+  docker-compose.yml ← PostgreSQL + Bot
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ PROBLEMAS COMUNS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Erro: "Module not found"
+→ Execute: pip install -r requirements.txt
+
+Erro: "Failed to connect to database"
+→ Verifique se PostgreSQL está rodando
+→ Ou use: docker-compose up -d postgres
+
+Erro: "Invalid token"
+→ Verifique o arquivo .env
+
+Bot não responde
+→ Verifique logs: tail -f chicobot.log
+→ Teste o token no BotFather
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎓 SEQUÊNCIA RECOMENDADA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✅ Leia QUICKSTART.md (5 min)
+2. ✅ Execute: python verify_setup.py
+3. ✅ Execute: docker-compose up -d
+   OU: run.bat (Windows) / ./run.sh (Linux)
+4. ✅ Teste no Telegram: /start
+5. ✅ Personalize: edite bot/prompts.py
+6. ✅ Deploy: ./deploy.sh (produção)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS IMPORTANTES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Use Docker para facilitar (mais fácil!)
+• Personalize as mensagens em bot/prompts.py
+• Adicione comandos em bot/handlers.py
+• Teste localmente antes de fazer deploy
+• Faça backup do banco regularmente
+• Monitore os logs: tail -f chicobot.log
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 PRECISA DE AJUDA?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 suporte@chicoia.com.br
+🌐 https://chicoia.com.br
+💬 Telegram: @chicoia_suporte
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ PRONTO! AGORA É SÓ COMEÇAR! ✨
+
+Execute: docker-compose up -d
+Teste: /start no Telegram
+
+Boa sorte! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
