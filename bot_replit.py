@@ -1,5 +1,6 @@
 import os
 import logging
+import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 from flask import Flask
@@ -81,10 +82,12 @@ async def run_bot():
     application.add_handler(CommandHandler("palpites", handle_message))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    await application.start()
-    await application.updater.start()
-    await application.updater.stop()
-    await application.stop()
+    async with application:
+        await application.updater.start()
+        await application.start()
+        import time
+        while True:
+            await asyncio.sleep(1)
 
 # Main - Run Flask + Bot together
 if __name__ == "__main__":
