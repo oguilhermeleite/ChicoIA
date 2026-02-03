@@ -16,7 +16,7 @@ import sys
 from datetime import datetime
 
 # Configuração de tokens
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or "8522357760:AAHn60ZJPYZ4rz4a051k7O8GUPV8ivm7JCE"
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or "8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or "AIzaSyCE0Bw-t0LsMacnxt-FjajyuHBzYiVNBaA"
 
 BASE_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
