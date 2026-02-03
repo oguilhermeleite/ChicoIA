@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
 """
-ChicoIA Bot - Versão otimizada para Replit
+ChicoIA Bot - Versão otimizada para deploy na nuvem
 Este bot funciona 24/7 na nuvem, sem precisar de PC ligado
 """
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 import json
 import urllib.request
 import urllib.parse
 import time
 import sys
-import os
 from datetime import datetime
 
-# Token do bot (pega do Secret do Replit)
-TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', "8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE")
-BASE_URL = f"https://api.telegram.org/bot{TOKEN}"
+# Configuração de tokens
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or "8522357760:AAHn60ZJPYZ4rz4a051k7O8GUPV8ivm7JCE"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or "AIzaSyCE0Bw-t0LsMacnxt-FjajyuHBzYiVNBaA"
+
+BASE_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
 
 # Contador de usuários atendidos
 usuarios_atendidos = set()
@@ -238,7 +243,7 @@ _Transforme suas apostas em lucro consistente!_ 🚀"""
         response = f"""✅ *Status do Bot*
 
 🤖 *Bot Online:* ✓ Funcionando 24/7
-🌐 *Servidor:* ✓ Replit Cloud
+🌐 *Servidor:* ✓ Cloud
 ⚡ *API Telegram:* ✓ OK
 📊 *Resposta:* ✓ Rápida
 
@@ -278,7 +283,7 @@ def main():
     global total_mensagens
 
     print("=" * 70)
-    print("🤖 ChicoIA Bot - MODO 24/7 ATIVO (REPLIT CLOUD)")
+    print("🤖 ChicoIA Bot - MODO 24/7 ATIVO")
     print("=" * 70)
     print()
     print("✅ Este bot atende TODOS os usuários do Telegram!")
@@ -294,7 +299,7 @@ def main():
         print("\nVerifique:")
         print("1. Sua conexão com internet")
         print("2. O token está correto")
-        print("3. Token está configurado nos Secrets do Replit")
+        print("3. Token está configurado nas variáveis de ambiente")
         return
 
     print(f"✅ Conectado com sucesso!")
@@ -306,7 +311,7 @@ def main():
     print("=" * 70)
     print()
     print(f"⏰ Iniciado em: {datetime.now().strftime('%d/%m/%Y às %H:%M:%S')}")
-    print(f"☁️  Servidor: Replit Cloud")
+    print(f"☁️  Servidor: Cloud")
     print()
     print("📱 Qualquer pessoa pode conversar agora com @ChicoIA_bot!")
     print("💻 Funcionando 24/7 mesmo com seu PC desligado!")

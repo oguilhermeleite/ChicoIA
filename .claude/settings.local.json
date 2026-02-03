@@ -4,7 +4,10 @@
       "Bash(find:*)",
       "Bash(ls:*)",
       "Bash(winget:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
