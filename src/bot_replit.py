@@ -7,6 +7,8 @@ Usa python-telegram-bot v20+ com Flask para Health Check
 import os
 import logging
 import threading
+import time
+import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 from flask import Flask
@@ -95,6 +97,15 @@ async def mensagem(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Ei, tive um problema aqui. Tenta de novo daqui a pouco! 😅"
         )
 
+async def post_init(application):
+    """Função executada após inicialização para limpar webhooks"""
+    try:
+        logger.info("Limpando webhooks antigos...")
+        await application.bot.delete_webhook(drop_pending_updates=True)
+        logger.info("Webhooks limpos com sucesso")
+    except Exception as e:
+        logger.warning(f"Erro ao limpar webhook: {e}")
+
 def start_flask():
     """Inicia servidor Flask em thread separada"""
     port = int(os.getenv('PORT', 8080))
@@ -103,7 +114,11 @@ def start_flask():
 
 def main():
     """Função principal"""
-    logger.info("=== ChicoIA Bot - Iniciando ===")
+    # ATRASO PROPOSITAL: Aguardar 10 segundos para Render matar processo antigo
+    logger.info("=== ChicoIA Bot - Aguardando inicialização ===")
+    logger.info("Aguardando 10 segundos para evitar conflitos de deploy...")
+    time.sleep(10)
+    logger.info("Iniciando bot agora...")
 
     # Iniciar Flask em thread separada (OBRIGATÓRIO para Render)
     flask_thread = threading.Thread(target=start_flask, daemon=True)
@@ -122,11 +137,19 @@ def main():
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, mensagem))
 
     logger.info("Handlers registrados")
+
+    # Limpar webhook antes de iniciar polling (evita conflitos)
+    logger.info("Preparando para limpar webhooks...")
+    asyncio.run(post_init(application))
+
     logger.info("Iniciando polling...")
 
     # IMPORTANTE: Usar run_polling da versão 20+
     # NÃO usar updater.start() que é da versão 13
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    application.run_polling(
+        allowed_updates=Update.ALL_TYPES,
+        drop_pending_updates=True
+    )
 
 if __name__ == "__main__":
     try:
