@@ -12,6 +12,12 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 from flask import Flask
 import google.generativeai as genai
+import sys
+
+# ⛔ KILL SWITCH: Impedir execução no Replit
+if os.getenv('REPL_ID') or os.getenv('REPL_SLUG') or os.getenv('REPL_OWNER'):
+    print("⛔ AMBIENTE REPLIT DETECTADO. Encerrando execução para priorizar o Render.")
+    sys.exit(0)
 
 # Configuração
 TELEGRAM_BOT_TOKEN = "8522357760:AAHn60ZJPYZ4rz4aO51k7O0GUPV8ivm7JCE"
